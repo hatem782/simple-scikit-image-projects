@@ -1,7 +1,7 @@
 import skimage as sk
 from utils import show_image
 
-image = sk.data.rocket()
+image = sk.data.colorwheel()
 red = image[:,:,0]
 green = image[:,:,1]
 blue = image[:,:,2]
