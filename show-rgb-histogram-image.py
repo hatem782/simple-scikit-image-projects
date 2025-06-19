@@ -6,5 +6,5 @@ red = image[:,:,0]
 green = image[:,:,1]
 blue = image[:,:,2]
 
-show_image.show_with_channels(image,red,green,blue)
+show_image.show_histogram_with_image(image,red,green,blue)
 

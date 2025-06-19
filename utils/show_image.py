@@ -37,3 +37,36 @@ def show_with_channels(original, red, green, blue):
 
     plt.tight_layout()
     plt.show()
+
+def show_histogram_with_image(image, red, green, blue):
+    plt.figure(figsize=(10, 6))
+
+    # Show original image (top row)
+    plt.subplot(2, 2, 1)
+    plt.imshow(image)
+    plt.title('Original Image')
+    plt.axis('off')
+
+    # Red channel histogram
+    plt.subplot(2, 2, 2)
+    plt.hist(red.ravel(), bins=256, color='red', alpha=0.8)
+    plt.title('Red Histogram')
+    plt.xlabel('Intensity')
+    plt.ylabel('Count')
+
+    # Green channel histogram
+    plt.subplot(2, 2, 3)
+    plt.hist(green.ravel(), bins=256, color='green', alpha=0.8)
+    plt.title('Green Histogram')
+    plt.xlabel('Intensity')
+    plt.ylabel('Count')
+
+    # Blue channel histogram
+    plt.subplot(2, 2, 4)
+    plt.hist(blue.ravel(), bins=256, color='blue', alpha=0.8)
+    plt.title('Blue Histogram')
+    plt.xlabel('Intensity')
+    plt.ylabel('Count')
+
+    plt.tight_layout()
+    plt.show()
